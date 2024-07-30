@@ -32,7 +32,6 @@ def main():
     if uploaded_file is not None:
         # Read the uploaded image
         image = cv2.imdecode(np.frombuffer(uploaded_file.read(), np.uint8), 1)
-        # image = cv2.imread(uploaded_file.read())
         
         # Upscale the image
         upscaled_image = upscale_image(image)
